@@ -1,0 +1,36 @@
+# Source files - exclude from npm package
+credentials/**/*.ts
+nodes/**/*.ts
+test/
+scripts/
+*.ts
+
+# Config files
+tsconfig.json
+.eslintrc.js
+.prettierrc
+jest.config.js
+gulpfile.js
+
+# IDE
+.idea/
+.vscode/
+
+# Git
+.git/
+.gitignore
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Development
+coverage/
+.nyc_output/
+
+# Keep these in npm package:
+# !LICENSE
+# !COMMERCIAL_LICENSE.md
+# !LICENSING_FAQ.md
+# !README.md
+# !dist/

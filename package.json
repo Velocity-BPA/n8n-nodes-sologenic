@@ -1,0 +1,86 @@
+{
+  "name": "n8n-nodes-sologenic",
+  "version": "1.0.0",
+  "description": "A comprehensive n8n community node for Sologenic ecosystem on XRPL providing 12 resources and 40+ operations for account management, SOLO token operations, DEX trading, market data, NFT marketplace, and staking capabilities.",
+  "license": "BUSL-1.1",
+  "author": {
+    "name": "Velocity BPA",
+    "email": "licensing@velobpa.com",
+    "url": "https://velobpa.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Velocity-BPA/n8n-nodes-sologenic.git"
+  },
+  "keywords": [
+    "n8n",
+    "n8n-community-node-package",
+    "sologenic",
+    "xrpl",
+    "xrp",
+    "blockchain",
+    "dex",
+    "solo",
+    "nft",
+    "tokenized-assets",
+    "cryptocurrency",
+    "trading"
+  ],
+  "main": "dist/nodes/Sologenic/Sologenic.node.js",
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/SologenicNetwork.credentials.js",
+      "dist/credentials/SologenicApi.credentials.js",
+      "dist/credentials/SologenicDex.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/Sologenic/Sologenic.node.js",
+      "dist/nodes/Sologenic/SologenicTrigger.node.js"
+    ]
+  },
+  "scripts": {
+    "build": "tsc && gulp build:icons",
+    "dev": "tsc --watch",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "format": "prettier --write \"**/*.ts\"",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "COMMERCIAL_LICENSE.md",
+    "LICENSING_FAQ.md"
+  ],
+  "dependencies": {
+    "xrpl": "^3.0.0",
+    "axios": "^1.6.8",
+    "ws": "^8.17.0",
+    "bignumber.js": "^9.1.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.12.7",
+    "@types/ws": "^8.5.10",
+    "@typescript-eslint/eslint-plugin": "^7.7.0",
+    "@typescript-eslint/parser": "^7.7.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-n8n-nodes-base": "^1.16.1",
+    "gulp": "^4.0.2",
+    "jest": "^29.7.0",
+    "n8n-workflow": "*",
+    "prettier": "^3.2.5",
+    "ts-jest": "^29.1.2",
+    "typescript": "^5.4.5"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  },
+  "engines": {
+    "node": ">=18.10.0"
+  }
+}
