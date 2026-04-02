@@ -58,6 +58,13 @@ export class SologenicApi implements ICredentialType {
       default: '',
       description: 'Your Sologenic API secret',
     },
+    {
+      displayName: 'API Base URL',
+      name: 'baseUrl',
+      type: 'string',
+      default: 'https://api.sologenic.org/v2',
+      description: 'Base URL for the Sologenic API',
+    },
   ];
 
   authenticate: IAuthenticateGeneric = {
